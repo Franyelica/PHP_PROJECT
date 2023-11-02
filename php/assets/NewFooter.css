@@ -1,0 +1,51 @@
+/*---------------ESTILOS FOOTER--------------------*/
+.footer-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    color: #161515;
+    background: #757574;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.logos {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    padding: 2rem;
+}
+
+.informacion {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    padding: 1rem;
+}
+
+#alcaldia {
+    margin-right: 2rem;
+}
+
+#udea {
+    margin-right: 2rem;
+}
+
+#red {
+    margin-right: 2rem;
+}
+
+.contacto {
+    padding: 1rem;
+}
+
+.direccion {
+    padding: 1rem;
+}

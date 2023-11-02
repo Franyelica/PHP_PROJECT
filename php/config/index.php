@@ -1,0 +1,9 @@
+<?php
+session_start();
+if(isset($_SESSION['usuario'])){
+    unset($_SESSION['usuario']);
+}else{
+    $usuario=$_POST["usuario"];
+    $_SESSION['usuario']=$usuario;
+}
+?>
