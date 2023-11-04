@@ -40,10 +40,11 @@ body {
 #titulo {
     padding: 1rem;
     margin-left: 5rem;
+    margin-right: 5rem;
 }
 
 #menu {
-    margin-left: 4rem;
+    margin-left: 5rem;
     padding: 1rem;
 }
 
@@ -51,36 +52,26 @@ body {
     text-decoration: none;
 }
 
-#menu img {
-    width: 4rem;
-}
-
 /*-------RESPONSIVE-------*/
 /* Estilos para hacerlo responsive */
 @media (max-width: 768px) {
     .header-container {
         display: flex;
-        flex-direction: row;
-        font-size: 0.8rem;
+        flex-direction: column;
+        font-size: 0.6rem;
     }
 
     .logo img {
-        width: 8rem;
+        width: 6rem;
     }
 
-    .logo {
-        margin: 0;
-    }
-
-    #titulo {
-        margin: 0;
-    }
-
+    .logo,
+    #titulo,
     #menu {
-        margin-left: 0;
+        margin: 0;
     }
 
     #menu img {
-        width: 3rem;
+        width: 2.1rem;
     }
 }
