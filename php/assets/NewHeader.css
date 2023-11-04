@@ -1,4 +1,8 @@
 /*-------------------ESTILOS HEADER---------------------*/
+body {
+    margin: 0%;
+}
+
 .header-container {
     display: flex;
     flex-direction: row;
@@ -35,15 +39,48 @@
 
 #titulo {
     padding: 1rem;
-    margin-left: 6rem;
-    margin-right: 6rem;
+    margin-left: 5rem;
 }
 
 #menu {
-    margin-left: 2rem;
+    margin-left: 4rem;
+    padding: 1rem;
 }
 
 #menu a {
-    padding: 1rem;
     text-decoration: none;
+}
+
+#menu img {
+    width: 4rem;
+}
+
+/*-------RESPONSIVE-------*/
+/* Estilos para hacerlo responsive */
+@media (max-width: 768px) {
+    .header-container {
+        display: flex;
+        flex-direction: row;
+        font-size: 0.8rem;
+    }
+
+    .logo img {
+        width: 8rem;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    #titulo {
+        margin: 0;
+    }
+
+    #menu {
+        margin-left: 0;
+    }
+
+    #menu img {
+        width: 3rem;
+    }
 }

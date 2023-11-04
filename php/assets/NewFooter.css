@@ -1,8 +1,13 @@
 /*---------------ESTILOS FOOTER--------------------*/
-.footer-container {
-    align-items: center;
+body {
+    margin: 0%;
+}
+
+footer {
+    background-color: #757574;
+    /* align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: auto;
     color: #161515;
     background: #757574;
@@ -11,41 +16,92 @@
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
+    line-height: normal;*/
+}
+
+.footer-container {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
     line-height: normal;
+    color: #161515;
 }
 
 .logos {
+    padding-bottom: 20px;
     align-items: center;
     display: flex;
     flex-direction: row;
     flex-shrink: 0;
     padding: 2rem;
+    margin-left: 2rem;
 }
 
 .informacion {
     align-items: center;
     display: flex;
+    flex-direction: column;
+    margin-right: 32px;
+    margin-left: 40%;
+}
+
+.inf_container {
+    align-items: center;
+    display: flex;
     flex-direction: row;
-    flex-shrink: 0;
-    padding: 1rem;
+}
+
+.derechos {
+    font-size: small;
 }
 
 #alcaldia {
     margin-right: 2rem;
 }
 
+#alcaldia img {
+    width: 150px;
+}
+
 #udea {
     margin-right: 2rem;
 }
 
-#red {
-    margin-right: 2rem;
+#udea img {
+    width: 80px;
+}
+
+#red img {
+    width: 150px;
 }
 
 .contacto {
-    padding: 1rem;
+    margin-right: 1.5rem;
 }
 
 .direccion {
-    padding: 1rem;
+    margin-left: 1.5rem;
+}
+
+/*-------RESPONSIVE-------*/
+/* Estilos para hacerlo responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        background: #757574;
+    }
+
+    .informacion {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-left: 2rem;
+    }
 }

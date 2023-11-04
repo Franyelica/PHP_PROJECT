@@ -3,11 +3,6 @@ body {
     margin: 0;
 }
 
-/*-------------------ESTILOS HEADER---------------------*/
-.clsheader {
-    width: 100%;
-}
-
 /*---------------ESTILOS CUERPO--------------------*/
 /*---------------ESTILOS SECCION 1--------------------*/
 .seccion1 {
@@ -27,7 +22,8 @@ body {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-right: 4rem;
 }
 
 #somos {

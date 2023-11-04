@@ -12,7 +12,6 @@
 
 <body>
     <!-----HEADER----->
-    
     <?php require('../layout/header.html')?>
     <!----CUERPO---->
     <!------------SECCION 1------------------>
@@ -118,6 +117,9 @@
         </div>
 
     </div>
+
+    <!------FOOTER------>
+    <?php require('../layout/footer.html')?>
 </body>
 
 </html>
