@@ -1,7 +1,8 @@
 <?php
-require_once 'models/Usuario.php';
+require_once 'models/UsuarioModelo.php';
 
 class UsuarioController{
+
     public function index(){
         echo "Controlador usuario - index";
     }

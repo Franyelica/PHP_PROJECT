@@ -2,14 +2,14 @@
 require_once 'Persona.php';
 class Inventario extends Persona{
     private $cantidad;
-    private $categoria;
+    private $categoriaID;
     private $fechaCreacion;
     private $fechaModificacion;
 
-    public function __construct($id,$nombre,$cantidad,Categoria $categoria,$fechaCreacion,$fechaModificacion){
+    public function __construct($id,$nombre,$cantidad,Categoria $categoriaID,$fechaCreacion,$fechaModificacion){
         parent::__construct($id,$nombre);
         $this->cantidad = $cantidad;
-        $this->categoria = $categoria;
+        $this->categoriaID = $categoriaID;
         $this->fechaCreacion = $fechaCreacion;
         $this->fechaModificacion = $fechaModificacion;
     }
@@ -19,7 +19,7 @@ class Inventario extends Persona{
         return $this->cantidad;
     }
     public function getCategoria(){
-        return $this->categoria;
+        return $this->categoriaID;
     }
     public function getFechaCreacion(){
         return $this->fechaCreacion;
@@ -32,8 +32,8 @@ class Inventario extends Persona{
     public function setCantidad($cantidad){
         $this->cantidad = $cantidad;
     }
-    public function setcategoria(Categoria $categoria){
-        $this->categoria = $categoria;
+    public function setcategoria(Categoria $categoriaID){
+        $this->categoriaID = $categoriaID;
     }
     public function setFechaCreacion($fechaCreacion){
         $this->fechaCreacion = $fechaCreacion;

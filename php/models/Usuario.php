@@ -24,6 +24,8 @@ class Usuario extends Persona{
         $this->password = $password;
     }
 
+
+
     public function save(){
         $sql="INSERT INTO usuarios VALUES(null,'
             {$this->getNombre()}','
@@ -55,6 +57,14 @@ class Usuario extends Persona{
             }
         }
         return $resultado;
+    }
+
+    public function update(){
+        $sql= "UPDATE usuarios
+        SET nombre = '{$this->getNombre()}'
+        WHERE id=2";
+    $saveupdate=$this->db->query($sql);
+    return $saveupdate;
     }
 
 }
