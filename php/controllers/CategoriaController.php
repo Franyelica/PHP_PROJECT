@@ -8,16 +8,33 @@ class CategoriaController {
         $this->conexion = Database::connect();
     }
 
+    public function consultarTodasLasCategorias() {
+        $sql = "SELECT * FROM categoria";
+        $result = $this->conexion->query($sql);
+        $categorias = array();
+
+        if ($result) {
+            while ($row = $result->fetch_assoc()) {
+                $categorias[] = $row;
+            }
+        }
+
+        return $categorias;
+    }
+
     public function crearCategoria($nombre) {
-        $nombre = $this->conexion->real_escape_string($nombre);
+        try {
+            $sql = "INSERT INTO categoria (nombre, fechaCreacion, fechaModificacion) VALUES (?, NOW(), NOW())";
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->bind_param("s", $nombre);
 
-        // Utiliza la función NOW() de MySQL para establecer la fecha de creación automáticamente.
-        $sql = "INSERT INTO categoria (nombre, fechaCreacion, fechaModificacion) VALUES ('$nombre', NOW(), NOW())";
-
-        if ($this->conexion->query($sql)) {
-            return "Categoría creada exitosamente.";
-        } else {
-            return "Error al crear la categoría: " . $this->conexion->error;
+            if ($stmt->execute()) {
+                return "Categoría creada exitosamente.";
+            } else {
+                throw new Exception("Error al crear la categoría.");
+            }
+        } catch (Exception $e) {
+            return "Error: " . $e->getMessage();
         }
     }
 
