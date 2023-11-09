@@ -1,0 +1,222 @@
+body {
+    width: 100%;
+    margin: 0;
+}
+
+/*---------------ESTILOS CUERPO--------------------*/
+/*---------------ESTILOS SECCION 1--------------------*/
+.seccion1 {
+    display: flex;
+    flex-direction: row;
+    padding: auto;
+    color: #161515;
+    text-align: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal
+}
+
+.texto1 {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin-left: 2rem;
+    margin-right: 4rem;
+}
+
+#somos {
+    height: 3rem;
+}
+
+h3 {
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    margin-left: 0.5rem;
+}
+
+#parrafo {
+    max-width: 45rem;
+}
+
+#boton1 {
+    width: 150px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 44.065px;
+    background: #222;
+    color: #FFF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 600;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.image1 {
+    padding: 1rem;
+    align-items: center;
+}
+
+/*---------------ESTILOS SECCION 2--------------------*/
+
+.seccion2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    color: #161515;
+    text-align: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.texto2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin-right: 2rem;
+}
+
+.procesos {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+.iniciacion {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin-right: 1rem;
+}
+
+.canto {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    margin-left: 1rem;
+
+}
+
+.infancia {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.instrumento {
+    display: flex;
+    flex-direction: column;
+    padding: 0.6rem;
+    margin-left: 1rem;
+}
+
+/*---------------ESTILOS SECCION 3--------------------*/
+.seccion3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: auto;
+    margin-top: 5rem;
+    margin-bottom: 6rem;
+    color: #161515;
+    text-align: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.formas {
+    display: flex;
+    flex-direction: row;
+}
+
+.texto3 {
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+    padding: 1rem;
+    margin-left: 2rem;
+}
+
+#text {
+    height: 3rem;
+}
+
+#boton2 {
+    width: 150px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 44.065px;
+    background: #222;
+    color: #FFF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 600;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/*---------------ESTILOS FOOTER--------------------*/
+/*.footer-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    color: #161515;
+    background: #757574;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.logos {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    padding: 2rem;
+}
+
+.informacion {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    padding: 1rem;
+}
+
+#alcaldia {
+    margin-right: 2rem;
+}
+
+#udea {
+    margin-right: 2rem;
+}
+
+#red {
+    margin-right: 2rem;
+}
+
+.contacto {
+    padding: 1rem;
+}
+
+.direccion {
+    padding: 1rem;
+}*/
