@@ -6,8 +6,13 @@ class Usuario extends Persona{
     private $rol;
     private $db;
 
+    private $error;
+
     public function __construct(){
-        //$this->db=Database::connect();
+        $this->db = Database::connect();
+        if ($this->db->connect_error) {
+            throw new Exception("Error de conexión en Usuario: " . $this->db->connect_error);
+        }
     }
 
     public function getEmail(){
@@ -21,22 +26,38 @@ class Usuario extends Persona{
         $this->email = $email;
     }
     public function setPassword($password){
-        $this->password = $password;
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        $this->password = $hashedPassword;
+    }
+
+    public function getError() {
+        return $this->error;
     }
 
 
 
-    public function save(){
-        $sql="INSERT INTO usuarios VALUES(null,'
-            {$this->getNombre()}','
-            {$this->getEmail()}','
-            {$this->getPassword()}','
-            user');";
-        $save=$this->db->query($sql);
-        $result = false;
-        if($save){
-            $result=true;
+    public function save() {
+        $hashedPassword = password_hash($this->getPassword(), PASSWORD_DEFAULT);
+
+        // Establecer el rol por defecto como 'admin'
+        $rol = 'admin';
+
+        $sql = "INSERT INTO usuarios 
+                VALUES (null, '{$this->getNombre()}', '{$this->getEmail()}', '{$hashedPassword}', '{$rol}')";
+                
+        try {
+            $save = $this->db->query($sql);
+
+            if (!$save) {
+                throw new Exception($this->db->error);
+            }
+
+            $result = true;
+        } catch (Exception $e) {
+            $this->error = $e->getMessage();
+            $result = false;
         }
+
         return $result;
     }
 

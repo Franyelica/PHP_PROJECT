@@ -15,7 +15,7 @@
 
     <div class="login-container">
         <h3>Bienvenido</h3>
-        <form method="post">
+        <form method="post" action="..\controllers\UsuarioController.php?action=login">
             <input type="text" placeholder="Correo Electronico" name="email" ><br>
             <input type="password" placeholder="Contraseña" name="password"><br>
             <a href="../inventario/inventario.html">
