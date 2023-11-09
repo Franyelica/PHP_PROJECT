@@ -14,16 +14,10 @@ body {
     height: 100vh;
 }
 
-img {
-    width: 16.25rem;
-    height: 11.625rem;
-    flex-shrink: 0;
-}
-
 h3 {
     color: #000;
     text-align: left;
-    font-family: Inria Sans;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;
@@ -52,63 +46,11 @@ input {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     color: #fff;
     text-align: center;
-    font-family: Inria Sans;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     margin-left: 25%;
     margin-top: 15%;
-}
-
-/* footer si ni idea, esta lo de whassapat pero no se si te sirva eso*/
-.footer-container {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: auto;
-    color: #161515;
-    background: #757574;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.logos {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-shrink: 0;
-    padding: 2rem;
-}
-
-.informacion {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-shrink: 0;
-    padding: 1rem;
-}
-
-#alcaldia {
-    margin-right: 2rem;
-}
-
-#udea {
-    margin-right: 2rem;
-}
-
-#red {
-    margin-right: 2rem;
-}
-
-.contacto {
-    padding: 1rem;
-}
-
-.direccion {
-    padding: 1rem;
 }

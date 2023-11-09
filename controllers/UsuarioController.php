@@ -7,7 +7,8 @@ class UsuarioController{
         echo "Controlador usuario - index";
     }
     public function registro(){
-        require_once 'views/usuario/registro.php';
+        /*require_once 'views/usuario/registro.php';*/
+        require_once 'C:\xampp\htdocs\PHP_PROJECT\views\registrarse.php';
     }
     
     public function save(){

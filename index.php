@@ -107,7 +107,7 @@
                 <p>Gestionar el inventario de la escuela, de forma ágil y segura.</p>
             </div>
             <div>
-                <a href="http://localhost/php/InicioSesion/Login.php">
+                <a href="http://localhost/PHP_PROJECT/views/Login.php">
                     <button id="boton2">Comenzar</button>
                 </a>
 

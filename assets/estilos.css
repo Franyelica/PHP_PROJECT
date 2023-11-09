@@ -169,54 +169,49 @@ h3 {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-/*---------------ESTILOS FOOTER--------------------*/
-/*.footer-container {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: auto;
-    color: #161515;
-    background: #757574;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
+@media (max-width: 768px) {
 
-.logos {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-shrink: 0;
-    padding: 2rem;
-}
+    .seccion1 {
+        display: flex;
+        flex-direction: column;
+    }
 
-.informacion {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-shrink: 0;
-    padding: 1rem;
-}
+    .seccion1 .texto1 img {
+        width: 30rem;
+    }
 
-#alcaldia {
-    margin-right: 2rem;
-}
+    .seccion1 .image1 {
+        margin-left: 2rem;
+    }
 
-#udea {
-    margin-right: 2rem;
-}
+    .seccion1 .image1 img {
+        width: 400px;
+    }
 
-#red {
-    margin-right: 2rem;
-}
+    .seccion2 {
+        display: flex;
+        flex-direction: column;
+    }
 
-.contacto {
-    padding: 1rem;
-}
+    .seccion2 .texto2 img {
+        width: 29rem;
+    }
 
-.direccion {
-    padding: 1rem;
-}*/
+    .procesos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .seccion3 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .seccion3 .formas img {
+        width: 450px;
+    }
+
+    .seccion3 .texto3 img {
+        width: 29rem;
+    }
+}
