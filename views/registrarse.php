@@ -1,3 +1,33 @@
+<?php
+require '../models/Db.php';
+
+$message = '';
+
+if (!empty($_POST['nombre']) && !empty($_POST['email']) && !empty($_POST['password'])) {
+    $nombre = $_POST['nombre'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+
+    $rol = 'user';
+
+    $sql = "INSERT INTO usuarios (nombre, email, password, rol) VALUES (:nombre, :email, :password, :rol)";
+    $stmt = $conn->prepare($sql);
+
+    $stmt->bindParam(':nombre', $nombre);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':password', $hashedPassword);
+    $stmt->bindParam(':rol', $rol);
+
+    if ($stmt->execute()) {
+        $message = 'Nuevo usuario creado satisfactoriamente';
+    } else {
+        $message = 'Lo sentimos, hay un error en el formulario';
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -13,23 +43,21 @@
     <!-- HEADER -->
     <?php 
     require('../layout/header.html');
-    if (file_exists('../controllers/UsuarioController.php')) {
-        require_once '../controllers/UsuarioController.php'; 
-    } else {
-        echo "Error: El controlador no está disponible.";
-        exit();
-    }
     ?>
-
+    
     <div class="login-container">
         <h3>Crear Cuenta</h3>
-        <form method="post">
+        <?php if (!empty($message)): ?>
+        <p><?= $message ?></p>
+        <?php endif; ?>
+        <form method="POST">
             <input type="text" placeholder="Nombre" name="nombre"><br>
             <input type="text" placeholder="Correo Electronico" name="email"><br>
             <input type="password" placeholder="Contraseña" name="password"><br>
-            <button class="btnRegistrarse" type="button" onclick="registrarUsuario()">Registrarse</button>
+            <!-- Cambia el tipo de botón a "submit" -->
+            <button class="btnRegistrarse" type="submit">Registrarse</button>
         </form>
-        <!-- Falta conectar registrarse con la pagina del inventario -->
+        <!-- Falta conectar registrarse con la página del inventario -->
     </div>
     
     <!-- FOOTER -->
