@@ -1,0 +1,82 @@
+body {
+    width: 100%;
+}
+
+.seccion_1 {
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    color: #161515;
+    text-align: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    font-style: normal;
+    line-height: normal;
+    margin-left: 5rem;
+}
+
+.seccion_1 a button {
+    background-color: rgb(184, 180, 180);
+    width: 170px;
+    height: 45px;
+    border-radius: 44.065px;
+    border: #161515;
+    font-weight: 700;
+    color: #161515;
+}
+
+.seccion_1 a button:hover {
+    background-color: grey;
+}
+
+.seccion_1 a {
+    text-decoration: none;
+}
+
+.seccion_2 {
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    color: #161515;
+    text-align: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    font-style: normal;
+    line-height: normal;
+    margin-top: 5rem;
+    margin-left: 5rem;
+}
+
+.tabla_inventario {
+    background-color: rgb(184, 180, 180);
+    width: 90%;
+    height: 4rem;
+}
+
+.seccion_3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: auto;
+    color: #161515;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    font-style: normal;
+    line-height: normal;
+    margin-top: 5rem;
+    margin-left: 5rem;
+}
+
+.col-md-3 {
+    padding: 1rem;
+}
+
+.col-md-3 button {
+    background-color: #A3160F;
+    width: 170px;
+    height: 45px;
+    border-radius: 44.065px;
+    border: #161515;
+    font-weight: 700;
+    color: #fbfbfb;
+}
