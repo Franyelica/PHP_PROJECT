@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -13,32 +12,22 @@
     <!-----HEADER----->
     <?php require('../layout/header.html')?>
     <!----CUERPO---->
-    <!------------SECCION 1------------------>
-    <div class="seccion1">
-        <div class="texto1">
-            <div id="somos">
-                <h3>CATEGORIAS</h3>
-            </div>
-            <div>
-                <img src="../assets/img/linea_seccion1-removebg-preview.png">
-            </div>
-            <div id="parrafo">
-                <p>Formamos parte de la Red de Músicas de Medellín es un proyecto de la
-                    Alcaldía de Medellín que aporta al fortalecimiento de la cultura ciudadana
-                    a través de la formación musical de niños, niñas, adolescentes y jóvenes.</p>
-            </div>
-            <div>
-                <a
-                    href="https://www.medellin.gov.co/es/secretaria-cultura-ciudadana/red-de-practicas-artisticas-y-culturales/red-de-musicas-de-medellin/">
-                    <button id="boton1">Más de nosotros</button>
-                </a>
-            </div>
-        </div>
+    <form method="post" action="agregar_producto.php">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" required>
 
-        <div class="image1">
-            <img src="../assets/img/escuela2.0.png" alt="">
-        </div>
-    </div>
+        <label for="descripcion">Descripción:</label>
+        <textarea name="descripcion"></textarea>
+
+        <label for="precio">Precio:</label>
+        <input type="number" step="0.01" name="precio" required>
+
+        <label for="stock">Stock:</label>
+        <input type="number" name="stock" required>
+
+        <button type="submit">Agregar Producto</button>
+    </form>
+
     <!------FOOTER------>
     <?php require('../layout/footer.html')?>
 </body>
