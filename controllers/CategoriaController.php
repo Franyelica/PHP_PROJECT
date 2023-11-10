@@ -1,24 +1,30 @@
 <?php
-require_once 'Db.php';
+require '../models/Db.php';
 
 class CategoriaController {
     private $conexion;
 
-    public function __construct() {
-        $this->conexion = Database::connect();
+    public function __construct(){
+        $this->db = Database::connect();
+        if ($this->db->connect_error) {
+            throw new Exception("Error de conexión en Usuario: " . $this->db->connect_error);
+        }
     }
 
-    public function consultarTodasLasCategorias() {
+    public function obtenerTodasLasCategorias() {
         $sql = "SELECT * FROM categoria";
         $result = $this->conexion->query($sql);
         $categorias = array();
-
+    
         if ($result) {
             while ($row = $result->fetch_assoc()) {
                 $categorias[] = $row;
             }
+        } else {
+            // Imprime el mensaje de error si hay algún problema con la consulta
+            echo "Error en la consulta: " . $this->conexion->error;
         }
-
+    
         return $categorias;
     }
 

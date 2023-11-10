@@ -1,5 +1,5 @@
 <?php
-require_once 'Db.php';
+require '../models/Db.php';
 
 class InventarioController {
     private $conexion;
