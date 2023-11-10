@@ -1,3 +1,22 @@
+<?php
+session_start();
+
+require 'models/Db.php';
+
+if (isset( $_SESSION['usuario_id'])) {
+    $records = $conn -> prepare('SELECT id,email, password FROM usuarios WHERE id = :id');
+    $records -> bindParam(':id', $_SESSION['usuario_id']);
+    $records->execute();
+$results = $records->fetch(PDO::FETCH_ASSOC);
+
+    $usuario = null;
+
+    if(count($results) > 0) {
+        $usuario = $results;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -11,6 +30,15 @@
 <body>
     <!-----HEADER----->
     <?php require('layout/header.html')?>
+    <?php if(!empty($usuario)): ?>
+        <br> Bienvenido. <?= $usuario['email']; ?>
+        <br>Tu sesion esta iniciada
+        <a href="logout.php">
+            Finalizar sesion
+        </a>
+    <?php else: ?>
+        <h1>Porfavor inicia o registra una sesion</h1>
+    <?php endif; ?>
     <!----CUERPO---->
     <!------------SECCION 1------------------>
     <div class="seccion1">
