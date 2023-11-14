@@ -36,6 +36,7 @@ if (!empty($_POST['nombre']) && !empty($_POST['email']) && !empty($_POST['passwo
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="../assets/registrarse.css">
+    <link rel="icon" href="../../PHP_PROJECT/assets/img/REMM.jpg" type="image/png">
     <script src="Scrypts/registrarse.js"></script>
 </head>
 

@@ -21,24 +21,14 @@
     <?php require('../layout/header.html')?>
     <!----CUERPO---->
     <div class="seccion_1">
-        <h2>Inventario</h2>
+        <h2>Categoria</h2>
         <div class="btn_create">
-            <a href="categoria.php">
+            <a href="categoria.html">
                 <button type="button" id="btnCrearCategoria">Crear nueva categoria</button>
             </a>
             <form method="POST" action="agregar_producto.php">
                 <label for="nombre">Nombre:</label>
                 <input type="text" name="nombre" required>
-
-                <label for="categoria">Categoría:</label>
-                <select name="categoria" id="cboCategoria" height= 200px></select>
-
-                <label for="cantidad">Cantidad:</label>
-                <input type="number" name="cantidad" required>
-
-                <a href="inventario.php">
-                <button type="button" id="btnAgregarCategoria" >Agregar articulo</button>
-                </a>
             </form>
         </div>
     </div>
@@ -50,7 +40,6 @@
                 <tr>
                     <th>Nombre</th>
                     <th>Categoría</th>
-                    <th>Cantidad</th>
                     <th>Fecha de creación</th>
                     <th>Última modificación</th>
                 </tr>
@@ -72,6 +61,7 @@
             <button type="button" id="btnConsultar">CONSULTAR</button>
         </div>
     </div>
+    
 
     <!------FOOTER------>
     <?php require('../layout/footer.html')?>
