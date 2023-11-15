@@ -11,4 +11,9 @@ try {
 } catch (PDOException $e) {
     throw new Exception('Error al conectar con la base de datos: ' . $e->getMessage());
 }
+
+function mensaje($texto) {
+    echo $texto;
+}
 ?>
+
