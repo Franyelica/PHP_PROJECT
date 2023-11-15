@@ -28,6 +28,27 @@ class Categoria extends Persona {
         $this->fechaModificacion = $fechaModificacion;
     }
 
+    public function getNombreCategoriaById($categoriaID) {
+        global $conn; // Asegúrate de tener una conexión a la base de datos
+
+        try {
+            $sql = "SELECT nombre_categoria FROM categoria WHERE id = ?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(1, $categoriaID);
+            $stmt->execute();
+
+            $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if ($resultado) {
+                return $resultado['nombre_categoria'];
+            } else {
+                return "Categoría no encontrada";
+            }
+        } catch (PDOException $e) {
+            return "Error: " . $e->getMessage();
+        }
+    }
+
     public function createCategoria() {
         global $conn;
     
