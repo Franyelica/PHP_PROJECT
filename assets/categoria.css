@@ -56,38 +56,6 @@ body {
     border-radius: 4px;
 }
 
-/*.seccion_3 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: auto;
-    color: #161515;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.2rem;
-    font-style: normal;
-    line-height: normal;
-    margin-top: 5rem;
-    margin-left: 5rem;
-}
-
-.col-md-3 {
-    padding: 1rem;
-}
-
-.col-md-3 button {
-    background-color: #A3160F;
-    width: 170px;
-    height: 45px;
-    border-radius: 44.065px;
-    border: #161515;
-    font-weight: 700;
-    color: #fbfbfb;
-}
-
-.col-md-3 button:hover {
-    background-color: #81120c;
-}*/
-
 #btnAgregarCategoria {
     background-color: #A3160F;
     width: 170px;
@@ -144,11 +112,19 @@ body {
     background-color: #720f0a;
 }
 
-#categoriaActualizar:hover {
+#btnActualizar:hover {
+    background-color: #720f0a;
+}
+
+#btnEliminar:hover {
     background-color: #720f0a;
 }
 
 .seccion_1 form input {
     border-radius: 44.065px;
     height: 2rem;
+}
+
+#formCategoria {
+    margin: 1rem;
 }

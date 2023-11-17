@@ -16,17 +16,51 @@ body {
 }
 
 .seccion_1 a button {
-    background-color: rgb(184, 180, 180);
+    /*background-color: rgb(184, 180, 180);
+    width: 170px;
+    height: 45px;
+    border-radius: 44.065px;
+    border: #161515;
+    font-weight: 700;
+    color: #161515;*/
+
+    background-color: #A3160F;
+    width: 170px;
+    height: 45px;
+    border-radius: 44.065px;
+    border: #161515;
+    font-weight: 700;
+    color: #fbfbfb
+}
+
+.seccion_1 a button:hover {
+    /*background-color: grey;*/
+    background-color: #720f0a;
+}
+
+#btnactualizar {
+    /*background-color: rgb(184, 180, 180);
     width: 170px;
     height: 45px;
     border-radius: 44.065px;
     border: #161515;
     font-weight: 700;
     color: #161515;
+    margin-top: 1rem;*/
+
+    background-color: #A3160F;
+    width: 170px;
+    height: 45px;
+    border-radius: 44.065px;
+    border: #161515;
+    font-weight: 700;
+    color: #fbfbfb;
+    margin-top: 1.5rem;
 }
 
-.seccion_1 a button:hover {
-    background-color: grey;
+#btnactualizar:hover {
+    /*background-color: grey;*/
+    background-color: #720f0a;
 }
 
 .seccion_1 a {
@@ -50,38 +84,67 @@ body {
     line-height: normal;
     margin-top: 5rem;
     margin-left: 5rem;
+    margin-bottom: 5rem;
 }
 
 .tabla_inventario {
     background-color: rgb(184, 180, 180);
-    width: 90%;
+    width: 95%;
     height: 4rem;
+    border-radius: 4px;
 }
 
-.seccion_3 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: auto;
-    color: #161515;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.2rem;
-    font-style: normal;
-    line-height: normal;
-    margin-top: 5rem;
-    margin-left: 5rem;
-}
-
-.col-md-3 {
-    padding: 1rem;
-}
-
-.col-md-3 button {
+.seccion_2 button {
     background-color: #A3160F;
     width: 170px;
     height: 45px;
     border-radius: 44.065px;
     border: #161515;
     font-weight: 700;
-    color: #fbfbfb;
+    color: #fbfbfb
+}
+
+.seccion_2 button:hover {
+    background-color: #720f0a;
+}
+
+#categoriaActualizar {
+    background-color: #b2aeae;
+    width: 170px;
+    height: 45px;
+    border-radius: 44.065px;
+    border: #161515;
+    font-weight: 700;
+    color: #161515;
+    text-align: center;
+}
+
+#idActualizar {
+    background-color: #b2aeae;
+    width: 170px;
+    height: 45px;
+    border-radius: 44.065px;
+    border: #161515;
+    font-weight: 700;
+    color: #161515;
+    text-align: center;
+}
+
+#idCategoriaActualizar {
+    background-color: #b2aeae;
+    width: 170px;
+    height: 45px;
+    border-radius: 44.065px;
+    border: #161515;
+    font-weight: 700;
+    color: #161515;
+    text-align: center;
+}
+
+form {
+    margin: 1.5rem;
+}
+
+#newCantidad {
+    margin-top: 1rem;
 }

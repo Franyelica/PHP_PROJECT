@@ -161,10 +161,10 @@
                         <?php endforeach; ?>
                     </select>
 
-                    <label for="cantidadActualizar">Nueva cantidad:</label>
+                    <br><label for="cantidadActualizar" id="newCantidad">Nueva cantidad:</label>
                     <input type="number" name="cantidadActualizar" id="input_inventario" required>
 
-                    <button type="submit" name="btnActualizar">Actualizar producto</button>
+                    <button type="submit" name="btnActualizar" id="btnactualizar" >Actualizar producto</button>
                 </form>
             </div>
         </div>
@@ -218,7 +218,7 @@
                             <td>
                             <form method="post" action="">
                                 <input type="hidden" name="id" value="<?php echo $registro['id']; ?>">
-                                <button type="submit" name="btnEliminar" onclick="return confirmarEliminacion(<?php echo $registro['id']; ?>)">Eliminar</button>
+                                <button type="submit" name="btnEliminar" id="btnEliminar" onclick="return confirmarEliminacion(<?php echo $registro['id']; ?>)">Eliminar</button>
                             </form>
                             </td>
                         </tr>
@@ -226,22 +226,6 @@
                 </tbody>
             </table>
         </div>
-
-        <div class="seccion_3">
-            <div class="col-md-3">
-                <br />
-                <button type="button" id="btnActualizar">ACTUALIZAR</button>
-            </div>
-            <div class="col-md-3">
-                <br />
-                <button type="button" id="btnEliminar">ELIMINAR</button>
-            </div>
-            <div class="col-md-3">
-                <br />
-                <button type="button" id="btnConsultar">CONSULTAR</button>
-            </div>
-        </div>
-
         <!------FOOTER------>
         <?php require('../layout/footer.html')?>
     </body>

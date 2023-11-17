@@ -63,14 +63,14 @@ $categorias = $categoria->readCategorias();
     <div class="seccion_1">
         <h2>Categoria</h2>
         <!-- Formulario para agregar una nueva categoría -->
-        <form method="post" action="">
+        <form method="post" action="" id="formCategoria">
             <label for="nombre_categoria">Nombre:</label>
             <input type="text" name="nombre_categoria" id="input_categoria" required>
             <button type="submit" name="btnAgregarCategoria" id="btnAgregarCategoria">Agregar categoría</button>
         </form>
 
         <!-- Formulario para actualizar una categoría -->
-        <form method="post" action="">
+        <form method="post" action="" id="formCategoria">
             <label for="categoriaActualizar">Selecciona la categoría a actualizar:</label>
             <select name="idCategoriaActualizar" id="categoriaActualizar">
                 <?php foreach ($categorias as $categoria) : ?>
@@ -83,7 +83,7 @@ $categorias = $categoria->readCategorias();
         </form>
 
         <!-- Formulario para eliminar una categoría -->
-        <form method="post" action="">
+        <form method="post" action="" id="formCategoria">
             <label for="categoriaEliminar">Selecciona la categoría a eliminar:</label>
             <select name="idCategoriaEliminar" id="categoriaEliminar">
                 <?php foreach ($categorias as $cat) : ?>
@@ -93,30 +93,6 @@ $categorias = $categoria->readCategorias();
             <button type="submit" name="btnEliminar" id="btnEliminar">Eliminar categoría</button>
         </form>
     </div>
-
-    <!-- Formulario para actualizar una categoría 
-    <form method="post" action="">
-        <label for="categoriaActualizar">Selecciona la categoría a actualizar:</label>
-        <select name="idCategoriaActualizar" id="categoriaActualizar">
-            <?php /* foreach ($categorias as $categoria) : ?>
-                <option value="<?php echo $categoria['id']; ?>"><?php echo $categoria['nombre_categoria']; ?></option>
-            <?php endforeach; */?>
-        </select>
-        <label for="nombreActualizar">Nuevo nombre:</label>
-        <input type="text" name="nombre_actualizado" required>
-        <button type="submit" name="btnActualizar" id="btnActualizar">Actualizar categoría</button>
-    </form>-->
-
-    <!-- Formulario para eliminar una categoría 
-    <form method="post" action="">
-        <label for="categoriaEliminar">Selecciona la categoría a eliminar:</label>
-        <select name="idCategoriaEliminar" id="categoriaEliminar">
-            <?php /*foreach ($categorias as $cat) : ?>
-                <option value="<?php echo $cat['id']; ?>"><?php echo $cat['nombre_categoria']; ?></option>
-            <?php endforeach; */?>
-        </select>
-        <button type="submit" name="btnEliminar" id="btnEliminar">Eliminar categoría</button>
-    </form>-->
 
     <div class="seccion_2">
     <table id="tblInventario" class="tabla_inventario">
