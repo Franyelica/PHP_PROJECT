@@ -34,10 +34,16 @@ if (isset($_POST['btnEliminar'])) {
     // Lógica para obtener el ID del formulario
     $idCategoriaEliminar = $_POST['idCategoriaEliminar'];
 
-    // Utiliza el método deleteCategoria con el ID a eliminar
-    $categoria->deleteCategoria($idCategoriaEliminar);
-}
+    // Validar que el ID sea un entero
+    $idCategoriaEliminar = filter_var($idCategoriaEliminar, FILTER_VALIDATE_INT);
 
+    if ($idCategoriaEliminar === false || $idCategoriaEliminar <= 0) {
+        mensaje("Error: El ID de la categoría a eliminar no es válido.");
+    } else {
+        // Utiliza el método deleteCategoria con el ID a eliminar
+        $categoria->deleteCategoria($idCategoriaEliminar);
+    }
+}
 // Obtener todas las categorías
 $categorias = $categoria->readCategorias();
 ?>
@@ -53,6 +59,11 @@ $categorias = $categoria->readCategorias();
     <link rel="icon" href="../../PHP_PROJECT/assets/img/REMM.jpg" type="image/png">
     <!-- DataTables -->
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script>
+        function confirmarEliminacion(id) {
+            return confirm("¿Estás seguro de que deseas eliminar la categoria con ID " + id + "?");
+        }
+    </script>
     
 </head>
 
@@ -81,17 +92,6 @@ $categorias = $categoria->readCategorias();
             <input type="text" name="nombre_actualizado" id="input_categoria"  required>
             <button type="submit" name="btnActualizar" id="btnActualizar">Actualizar categoría</button>
         </form>
-
-        <!-- Formulario para eliminar una categoría -->
-        <form method="post" action="" id="formCategoria">
-            <label for="categoriaEliminar">Selecciona la categoría a eliminar:</label>
-            <select name="idCategoriaEliminar" id="categoriaEliminar">
-                <?php foreach ($categorias as $cat) : ?>
-                    <option value="<?php echo $cat['id']; ?>"><?php echo $cat['nombre_categoria']; ?></option>
-                <?php endforeach; ?>
-            </select>
-            <button type="submit" name="btnEliminar" id="btnEliminar">Eliminar categoría</button>
-        </form>
     </div>
 
     <div class="seccion_2">
@@ -111,6 +111,12 @@ $categorias = $categoria->readCategorias();
                 <td class="items_categoria"><?php echo $categoria['nombre_categoria']; ?></td>
                 <td class="items_categoria"><?php echo $categoria['fecha_creacion']; ?></td>
                 <td class="items_categoria"><?php echo $categoria['fecha_modificacion']; ?></td>
+                <td>
+                    <form method="post" action="">
+                        <input type="hidden" name="idCategoriaEliminar" value="<?php echo $categoria['id']; ?>">
+                        <button type="submit" name="btnEliminar" id="btnEliminar" onclick="return confirmarEliminacion(<?php echo $categoria['id']; ?>)">Eliminar</button>
+                    </form>
+                </td>
                 <!-- Otras columnas... -->
             </tr>
         <?php endforeach; ?>

@@ -112,25 +112,24 @@ class Categoria extends Persona {
 }
 
 
-    public function deleteCategoria($id)
-{
+public function deleteCategoria($id) {
     global $conn;
 
     try {
+        echo "Inicio de deleteCategoria. ID: $id<br>";
         $sql = "DELETE FROM categoria WHERE id = ?";
         $stmt = $conn->prepare($sql);
-        $stmt->bindParam(1, $id, PDO::PARAM_INT); // Asegúrate de indicar que es un parámetro entero
+        $stmt->bindParam(1, $id, PDO::PARAM_INT);
 
         if ($stmt->execute()) {
             mensaje("Categoría eliminada exitosamente.");
         } else {
-            mensaje("Error al eliminar la categoría.");
+            mensaje("Error al eliminar la categoría. SQL: $sql");
         }
     } catch (PDOException $e) {
         mensaje("Error: " . $e->getMessage());
     }
 }
-
 
 }
 ?>
