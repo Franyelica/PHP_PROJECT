@@ -43,7 +43,7 @@ if (!empty($_POST['nombre']) && !empty($_POST['email']) && !empty($_POST['passwo
 <body>
     <!-- HEADER -->
     <?php 
-    require('../layout/header.html');
+    require('../layout/header.php');
     ?>
     
     <div class="login-container">

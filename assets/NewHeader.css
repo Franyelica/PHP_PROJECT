@@ -55,6 +55,10 @@ body {
     text-decoration: none;
 }
 
+#menu p {
+    font-size: medium;
+}
+
 /*-------RESPONSIVE-------*/
 /* Estilos para hacerlo responsive */
 @media (max-width: 768px) {

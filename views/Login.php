@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['email']) && !empty($
 <body>
 
     <!-----HEADER----->
-    <?php require('../layout/header.html')?>
+    <?php require('../layout/header.php')?>
 
     <div class="login-container">
         <h3>Bienvenido</h3>

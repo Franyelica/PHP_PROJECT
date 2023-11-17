@@ -116,7 +116,7 @@
 
     <body>
         <!-----HEADER----->
-        <?php require('../layout/header.html')?>
+        <?php require('../layout/header.php')?>
         <!----CUERPO---->
         <div class="seccion_1">
             <h2>Inventario</h2>
@@ -126,7 +126,7 @@
                 </a>
                 <form method="post" action="">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" name="nombre" required>
+                    <input type="text" name="nombre" id="input_inventario" required>
 
                     <select name="idCategoriaActualizar" id="categoriaActualizar">
                         <?php foreach ($categorias as $categoria) : ?>
@@ -135,22 +135,47 @@
                     </select>
 
                     <label for="cantidad">Cantidad:</label>
-                    <input type="number" name="cantidad" required>
+                    <input type="number" name="cantidad" id="input_inventario" required>
 
                     <a href="inventario.php">
                     <button type="submit" name="btnAgregarProducto">Agregar artículo</button>
                     </a>
                 </form>
+
+                 <!-- Formulario para actualizar un producto -->
+                <form method="post" action="">
+                    <label for="idActualizar">Selecciona el producto a actualizar:</label>
+                    <select name="idActualizar" id="idActualizar">
+                        <?php foreach ($registrosInventario as $registro) : ?>
+                            <option value="<?php echo $registro['id']; ?>"><?php echo $registro['nombre']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+
+                    <label for="nombreActualizar">Nuevo nombre:</label>
+                    <input type="text" name="nombreActualizar"  id="input_inventario" required>
+
+                    <label for="idCategoriaActualizar">Nueva categoría:</label>
+                    <select name="idCategoriaActualizar" id="idCategoriaActualizar">
+                        <?php foreach ($categorias as $categoria) : ?>
+                            <option value="<?php echo $categoria['id']; ?>"><?php echo $categoria['nombre_categoria']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+
+                    <label for="cantidadActualizar">Nueva cantidad:</label>
+                    <input type="number" name="cantidadActualizar" id="input_inventario" required>
+
+                    <button type="submit" name="btnActualizar">Actualizar producto</button>
+                </form>
             </div>
         </div>
-        <div class="seccion_1">
+        <!--<div class="seccion_1">-->
             <!-- Formulario para actualizar un producto -->
-        <form method="post" action="">
+        <!--<form method="post" action="">
             <label for="idActualizar">Selecciona el producto a actualizar:</label>
             <select name="idActualizar" id="idActualizar">
-                <?php foreach ($registrosInventario as $registro) : ?>
+                <?php /*foreach ($registrosInventario as $registro) : ?>
                     <option value="<?php echo $registro['id']; ?>"><?php echo $registro['nombre']; ?></option>
-                <?php endforeach; ?>
+                <?php endforeach; */?>
             </select>
 
             <label for="nombreActualizar">Nuevo nombre:</label>
@@ -158,9 +183,9 @@
 
             <label for="idCategoriaActualizar">Nueva categoría:</label>
             <select name="idCategoriaActualizar" id="idCategoriaActualizar">
-                <?php foreach ($categorias as $categoria) : ?>
+                <?php /*foreach ($categorias as $categoria) : ?>
                     <option value="<?php echo $categoria['id']; ?>"><?php echo $categoria['nombre_categoria']; ?></option>
-                <?php endforeach; ?>
+                <?php endforeach; */?>
             </select>
 
             <label for="cantidadActualizar">Nueva cantidad:</label>
@@ -168,7 +193,7 @@
 
             <button type="submit" name="btnActualizar">Actualizar producto</button>
         </form>
-        </div>
+        </div>-->
 
 
         <div class="seccion_2">

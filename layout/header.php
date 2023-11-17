@@ -19,10 +19,25 @@
                 <div id="titulo">
                     <h2>Escuela de Musica Villa Laura</h2>
                 </div>
+
                 <div id="menu">
+                    <?php if(!empty($usuario)): ?>
+                    <p> <br> Bienvenido<br>
+                        <?= $usuario['email']; ?>
+                    <br>Tu sesion esta iniciada</p>
+                    <a href="logout.php">
+                        <img src="../../PHP_PROJECT/assets/img/login.png" alt="logout">
+                        <!--Finalizar sesion-->
+                    </a> 
+                    <?php else: ?>
                     <a href="http://localhost/PHP_PROJECT/views/Login.php">
-                        <img src="../../PHP_PROJECT/assets/img/login.png" alt="login">
+                        <img src="../../PHP_PROJECT/assets/img/Vector.png" alt="login">
                     </a>
+                    <!--<h1>Porfavor inicia o registra una sesion</h1>-->
+                    <?php endif; ?>
+                    <!--<a href="http://localhost/PHP_PROJECT/views/Login.php">
+                        <img src="../../PHP_PROJECT/assets/img/login.png" alt="login">
+                    </a>-->
                     <a href="http://localhost/PHP_PROJECT/views/inventario.php">
                         <img src="../../PHP_PROJECT/assets/img/inventory.png" alt="inventario">
                     </a>

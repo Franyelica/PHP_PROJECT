@@ -30,16 +30,17 @@ $results = $records->fetch(PDO::FETCH_ASSOC);
 
 <body>
     <!-----HEADER----->
-    <?php require('layout/header.html')?>
-    <?php if(!empty($usuario)): ?>
-        <br> Bienvenido. <?= $usuario['email']; ?>
-        <br>Tu sesion esta iniciada
-        <a href="logout.php">
-            Finalizar sesion
-        </a>
-    <?php else: ?>
-        <h1>Porfavor inicia o registra una sesion</h1>
-    <?php endif; ?>
+    <?php require('layout/header.php')?>
+    <?php /*if(!empty($usuario)): ?>
+                    <br> Bienvenido.
+                    <?= $usuario['email']; ?>
+                    <br>Tu sesion esta iniciada
+                    <a href="logout.php">
+                        Finalizar sesion
+                    </a>
+                    <?php else: ?>
+                    <h1>Porfavor inicia o registra una sesion</h1>
+                    <?php endif; */?>
     <!----CUERPO---->
     <!------------SECCION 1------------------>
     <div class="seccion1">
