@@ -116,7 +116,6 @@ public function deleteCategoria($id) {
     global $conn;
 
     try {
-        echo "Inicio de deleteCategoria. ID: $id<br>";
         $sql = "DELETE FROM categoria WHERE id = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(1, $id, PDO::PARAM_INT);
